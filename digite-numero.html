@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+
+<title>
+    Títilo da Página Olá!
+</title>
+</head>
+<body>
+       <h1>Digite Um Número</h1>
+       <input id="n1" value="5a">
+       <button onclick="aparecer()">Resultado</button>
+       <span></span>
+       <script>
+        var n1 = document.querySelector('#n1')
+        var resultado = document.querySelector('span')
+  function aparecer(){
+var n = 0;
+var x = 0;
+
+while (n < n1.value) {
+  n++;
+  x += n;
+}
+      resultado.innerHTML = x
+    }       
+        </script>
+</body>
+</html>
