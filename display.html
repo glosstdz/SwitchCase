@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Display</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+
+    <style>
+    
+         body{
+            background-color: rgb(199, 199, 199);
+        }
+
+        .botao {
+            display: inline-block;
+            border-radius: 4px;
+            background-color: brown;
+            border: none;
+            color: #ffff;
+            text-align: center;
+            font-size: 28px;
+            padding: 20px;
+            width: 200px;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+        .botao span {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+        }
+
+        .botao span:after {
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
+        }
+
+        .botao:hover span {
+            padding-right: 25px;
+        }
+
+        .botao:hover span:after {
+            opacity: 1;
+            right: 0;
+        }
+
+        img {
+            float: center;
+        }
+
+        .button1{
+            background-color: rgb(60, 139, 204);
+            border: none;
+            color: white;
+            padding: 5px 10px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 10px 2px;
+            cursor: pointer;
+        }
+
+        p.ex2 {display: inline;}
+
+        p.ex3 {display: inline-block;}
+
+    </style>
+</head>
+<body>
+
+    <p>
+    <img src="https://cdn-icons-png.flaticon.com/512/2867/2867342.png" width="250px" height="250px" style="margin-left: 650px; margin-bottom: 20px;"></p>
+
+    <center>
+    <p>
+        A propriedade CSS display especifica o tipo de caixa de renderização usada por um elemento.
+        <br>
+        No HTML, os valores padrões da propriedade <b>display</b> são feitas a partir do comportamento descrito
+        <br>nas especificações HTML ou da folha de estilo padrão do navegador/usuário. O valor padrão em XML é inline.
+        <br>Além dos muitos tipos diferentes de exibição de caixa, o valor none permite desativar a exibição de um elemento;
+        <br>quando você usa none, todos os elementos descendentes também tem a sua exibição desativada. 
+        <br>O documento é renderizado como se o elemento não existisse na árvore do documento.
+    </p>
+    </center>
+
+    <p style="display: inline">Exemplo de Display Inline</p>
+    <br>
+    <p style="display: inline-block">Exemplo de Display Inline Block</p>
+
+    
+    <center>
+        <button class="button1">
+        Enviar
+    </button>
+    </center>
+
+    <button class="botao"><span>Clique Aqui</span></button>
+
+    
+</body>
+</html>
