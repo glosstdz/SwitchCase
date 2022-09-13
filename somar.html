@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+
+<title>
+    Títilo da Página Olá!
+</title>
+
+<style>
+    .bt {
+        background-color: #5b8d2c;
+            border: none;
+            color: rgb(255, 255, 255);
+            padding: 5px 10px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 10px 2px;
+    }
+
+    .bt2 {
+        background-color: #2b89d6;
+            border: none;
+            color: rgb(0, 0, 0);
+            padding: 5px 10px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 10px 2px;
+    }
+
+
+</style>
+
+</head>
+<body><center>
+    <h1>Nome</h1>
+       <input id="nome">
+       <h1>1° Bimestre</h1>
+       <input id="n1" type="number">
+       <h1>2° Bimestre</h1>
+       <input id="n2" type="number">
+       <h1>3° Bimestre</h1>
+       <input id="n3" type="number">
+       <h1>4° Bimestre</h1>
+       <input id="n4" type="number" >
+       <button class="bt" onclick="aparecer()">Calcular</button>
+       <button class="bt2" id="bot">Resultado</button>
+    </center>
+       <script>
+        var nome = document.querySelector('#nome')
+        var n1 = document.querySelector('#n1')
+        var n2 = document.querySelector('#n2')
+        var n3 = document.querySelector('#n3')
+        var n4 = document.querySelector('#n4')
+        var resultado = document.querySelector('#bot')
+  function aparecer(){
+      var media = (parseInt(n1.value) + parseInt(n2.value) + 
+      parseInt(n3.value) + parseInt(n4.value)) / 4 
+      if(media<6){
+        resultado.innerHTML ="Reprovado com Média" + parseInt (media)
+      } else{
+          resultado.innerHTML ="Aprovado com Média" + parseInt (media)
+    }
+      
+    }console.log(media)       
+        </script>
+</body>
+</html>
