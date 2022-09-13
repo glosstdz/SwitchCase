@@ -1,0 +1,45 @@
+<html lang="pt-br">
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Equação do Primeiro Grau</title>
+
+</head>
+
+<body>
+<input id="n1" type="number" min="1" step="1"/>
+<input id="n2" type="number" min="1" step="1"/>
+<input id="n3" type="number" min="1" step="1"/>
+<input id="n4" type="number" min="1" step="1"/><br>
+<!-- Chamada da função aparecer através do botão ONCLICK -->
+<button onclick="aparecer()">Aparecer</button>
+<br> <br>
+O resultado é <span></span><br>
+O resultado é <div></div><br>
+<!-- Início do SCRIPT -->
+<script>
+var n1 = document.querySelector('#n1')
+var n2 = document.querySelector('#n2')
+var n3 = document.querySelector('#n3')
+var n4 = document.querySelector('#n4')
+
+// Seleção do elemento n1 passado pelo elemento SPAN
+var resultado = document.querySelector('span')
+var resultado2 = document.querySelector('div')
+//Função aparecer
+function aparecer()
+{
+// Resultado .inerHTML propriedade do HTML recebe n1.value (valor do N1)
+resultado.innerHTML = (parseInt(n1.value) + parseInt(n2.value) + parseInt(n3.value) + parseInt(n4.value))/4
+
+resultado2.innerHTML = (parseInt(n1.value) + parseInt(n2.value) + parseInt(n3.value) + parseInt(n4.value))/4
+}
+</script>
+<!-- Fim do SCRIPT -->
+
+</body>
+
+</html>
